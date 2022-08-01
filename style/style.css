@@ -45,7 +45,7 @@ body{
     background-color: black;
     border: 20px solid rgb(235, 235, 146);
     box-sizing: border-box;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 7px 7px 7px black;
     padding: 20px 20px;
     /*min-width: 587px;*/
 }
@@ -59,7 +59,7 @@ body{
     width: 100%;
     height: 450px;
     content: "";
-    background-color: white;
+    background-color: rgb(130, 207, 238);
 }
  #board h3{
     text-align: center;

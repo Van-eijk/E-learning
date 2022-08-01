@@ -4,7 +4,7 @@
     $x1 = 0 ;
     $x2 = 0 ;
     $noSolution = "Pas de solution";
-    $errorNumber = "Entrez uniquement des nombres entiers";
+    $errorNumber = "";
     $a = $_POST["a"];
     $b = $_POST["b"];
     $c = $_POST["c"];
@@ -13,21 +13,47 @@
 
         $delta = $b * $b - 4 * $a * $c ;
 
-        if($delta == 0){
-            $x0 = (-1 * $b)/ 2 * $a ;
-        }
+            if($delta == 0){
+                $x0 = (-1 * $b)/ 2 * $a ;
+            }
 
-        else if($delta > 0){
-            $x1 = (-1 * $b - sqrt($delta))/ 2* $a ;
-            $x2 = (-1 * $b + sqrt($delta))/ 2* $a ;
+            else if($delta > 0){
+                $x1 = (-1 * $b - sqrt($delta))/ 2* $a ;
+                $x2 = (-1 * $b + sqrt($delta))/ 2* $a ;
 
-        }
-        else{
+            }
+            else{
 
-            $noSolution = "Pas de solution car, le distriminant est négatif !";
+                $noSolution = "Pas de solution car, le distriminant est négatif !";
 
 
-        } 
+            } 
+
+        /*if(is_int($a)==true && is_int($b)==true && is_int($c)==true){
+
+            $delta = $b * $b - 4 * $a * $c ;
+
+            if($delta == 0){
+                $x0 = (-1 * $b)/ 2 * $a ;
+            }
+
+            else if($delta > 0){
+                $x1 = (-1 * $b - sqrt($delta))/ 2* $a ;
+                $x2 = (-1 * $b + sqrt($delta))/ 2* $a ;
+
+            }
+            else{
+
+                $noSolution = "Pas de solution car, le distriminant est négatif !";
+
+
+            } 
+
+       }
+       else{
+            $errorNumber = "Entrez uniquement des nombres entiers";
+
+       }*/
       
     }
 
@@ -187,7 +213,7 @@
 
 <?php 
 
-        /*if(is_int($a)== 0 || is_int($b)== 0 || is_int($c)== 0){
+       /* if(!empty($errorNumber)){5
            ?>
 
                 <script>
@@ -200,7 +226,8 @@
 
                 </script>
         <?php 
-        }*/
+        }
+        */
     
     ?>
 

@@ -25,7 +25,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
     height: 100%;
     width: 100%;
     margin: auto;
@@ -194,6 +193,9 @@ input[type="submit"]:hover{
     /*color: yellow;*/
 }
 
+#solutionEquation{
+    display: none;
+}
 #x0{
     flex: 1;
     /*background-color: green;*/

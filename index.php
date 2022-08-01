@@ -13,21 +13,21 @@
 
         $delta = $b * $b - 4 * $a * $c ;
 
-            if($delta == 0){
-                $x0 = (-1 * $b)/ 2 * $a ;
-            }
+        if($delta == 0){
+            $x0 = (-1 * $b)/ 2 * $a ;
+        }
 
-            else if($delta > 0){
-                $x1 = (-1 * $b - sqrt($delta))/ 2* $a ;
-                $x2 = (-1 * $b + sqrt($delta))/ 2* $a ;
+        else if($delta > 0){
+            $x1 = (-1 * $b - sqrt($delta))/ 2* $a ;
+            $x2 = (-1 * $b + sqrt($delta))/ 2* $a ;
 
-            }
-            else{
+        }
+        else{
 
-                $noSolution = "Pas de solution car, le distriminant est négatif !";
+            $noSolution = "Pas de solution car, le distriminant est négatif !";
 
 
-            } 
+        } 
       
     }
 
@@ -76,7 +76,7 @@
 
                 <div id="right">
                     <p>SOLUTION</p>
-                    <p> <?php echo($a); ?> <em>x² + </em> <?php echo($b); ?> <em>x + </em> <?php echo($c); ?> = 0 </p>
+                    <p id="solutionEquation"> <?php echo($a); ?> <em>x² + </em> <?php echo($b); ?> <em>x + </em> <?php echo($c); ?> = 0 </p>
                     <p id="info"></p>
                     <div id="result">
                         <div id="delta">
@@ -116,6 +116,7 @@
         let valeur1 = document.getElementById("x1");
         let valeur2 = document.getElementById("x2");
         let info = document.getElementById("info");
+        let solutionEquation = document.getElementById("solutionEquation");
 
     </script>
 </body>
@@ -129,6 +130,7 @@
            ?>
 
                 <script>
+                    solutionEquation.style.display = "block";
                     barre.style.display = "block";
                     right.style.display = "flex";
                     valeur1.style.display = "none";
@@ -148,6 +150,7 @@
         ?>
 
             <script>
+                solutionEquation.style.display = "block";
                 barre.style.display = "block";
                 right.style.display = "flex";
                 valeur0.style.display = "none";
@@ -167,6 +170,7 @@
            ?>
 
                 <script>
+                    solutionEquation.style.display = "block";
                     barre.style.display = "block";
                     right.style.display = "flex";
                     info.innerHTML = "<?php echo($noSolution); ?>"

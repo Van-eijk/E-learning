@@ -1,3 +1,18 @@
+/***** DEFINITION D'UNE POLICE ******/
+
+@font-face{
+    font-family: 'AlexBrush';
+    src: url('../font/AlexBrush.woff');
+}
+
+@font-face{
+    font-family: 'learning';
+    src: url('../font/learning.ttf');
+}
+
+
+
+
 :root{
     height: 100%;
     width: 100%;
@@ -18,6 +33,7 @@ body{
     /*display: flex;
     align-items: center;
     justify-content: center;*/
+    font-family: 'comic sans MS';
 }
 
 
@@ -139,6 +155,8 @@ form{
     border: none;
     color: yellow;
     /*border-bottom: 1px solid white;*/
+    font-family: 'comic sans MS';
+
 
 
 }
@@ -152,6 +170,8 @@ input[type="submit"]{
     height: 45px;
     margin: 0px 0px;
     box-sizing: border-box;
+    font-family: 'comic sans MS';
+
     
 }
 

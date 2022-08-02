@@ -11,11 +11,21 @@
     
 
     if(isset($_POST["resoudre"])){
+
+        // Récupération des valeurs entrées par l'utilisateur
+
         $a = $_POST["a"];
         $b = $_POST["b"];
         $c = $_POST["c"];
 
-        $delta = $b * $b - 4 * $a * $c ;
+        // Conversion des valeurs entrées par l'utilisateur en des entiers 
+
+        settype($a,"integer");
+        settype($b,"integer");
+        settype($c,"integer");
+
+
+        $delta = $b * $b - 4 * $a * $c ; // Calcul du discriminant
 
             if($delta == 0){
                 $x0 = (-1 * $b)/ 2 * $a ;
@@ -33,32 +43,6 @@
 
             } 
 
-        /*if(is_int($a)==true && is_int($b)==true && is_int($c)==true){
-
-            $delta = $b * $b - 4 * $a * $c ;
-
-            if($delta == 0){
-                $x0 = (-1 * $b)/ 2 * $a ;
-            }
-
-            else if($delta > 0){
-                $x1 = (-1 * $b - sqrt($delta))/ 2* $a ;
-                $x2 = (-1 * $b + sqrt($delta))/ 2* $a ;
-
-            }
-            else{
-
-                $noSolution = "Pas de solution car, le distriminant est négatif !";
-
-
-            } 
-
-       }
-       else{
-            $errorNumber = "Entrez uniquement des nombres entiers";
-
-       }*/
-      
     }
 
 ?>
@@ -206,7 +190,6 @@
                     info.innerHTML = "<?php echo($noSolution); ?>"
                     info.style.color = "red";
                     info.style.fontWeight = "bold";
-
                     valeur0.style.display = "none";
                     valeur1.style.display = "none";
                     valeur2.style.display = "none";
@@ -214,27 +197,6 @@
                 </script>
         <?php 
         }
-    
-    ?>
-
-
-<?php 
-
-       /* if(!empty($errorNumber)){5
-           ?>
-
-                <script>
-                    barre.style.display = "block";
-                    right.style.display = "flex";
-                    info.innerHTML = "<?php echo($errorNumber); ?>"
-                    valeur0.style.display = "none";
-                    valeur1.style.display = "none";
-                    valeur2.style.display = "none";
-
-                </script>
-        <?php 
-        }
-        */
     
     ?>
 

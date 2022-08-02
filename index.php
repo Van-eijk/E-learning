@@ -3,13 +3,17 @@
     $x0 = 0 ;
     $x1 = 0 ;
     $x2 = 0 ;
+    $a = 0;
+    $b = 0;
+    $c = 0;
     $noSolution = "Pas de solution";
     $errorNumber = "";
-    $a = $_POST["a"];
-    $b = $_POST["b"];
-    $c = $_POST["c"];
+    
 
-    if($_POST["resoudre"]){
+    if(isset($_POST["resoudre"])){
+        $a = $_POST["a"];
+        $b = $_POST["b"];
+        $c = $_POST["c"];
 
         $delta = $b * $b - 4 * $a * $c ;
 
@@ -200,6 +204,9 @@
                     barre.style.display = "block";
                     right.style.display = "flex";
                     info.innerHTML = "<?php echo($noSolution); ?>"
+                    info.style.color = "red";
+                    info.style.fontWeight = "bold";
+
                     valeur0.style.display = "none";
                     valeur1.style.display = "none";
                     valeur2.style.display = "none";

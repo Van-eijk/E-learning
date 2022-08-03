@@ -60,7 +60,7 @@
     <div id="main" >
         <div id="board">
             <div id="date">
-                <p>Vendr<strong>edi, le 29 ju</strong>illet 2022</p>
+                <p id="mainDate"></p>
             </div>
 
             <h3>RESOLUTION DES EQUATIONS DU 2nd DEGRE SOUS LA FORME <em>ax² + bx + c = 0</em></h3>
@@ -133,6 +133,14 @@
         let solutionEquation = document.getElementById("solutionEquation");
 
     </script>
+
+    <script>
+        // Gestion de la date
+        let d = new Date();
+        document.getElementById("mainDate").innerHTML= d;
+        document.getElementById("mainDate").style.fontSize = "small";
+
+    </script>
 </body>
 </html>
 
@@ -149,6 +157,8 @@
                     right.style.display = "flex";
                     valeur1.style.display = "none";
                     valeur2.style.display = "none";
+                    valeur0.style.color = "yellow";
+
                 </script>
         <?php 
         }
@@ -169,7 +179,10 @@
                 right.style.display = "flex";
                 valeur0.style.display = "none";
                 valeur1.style.display = "flex";
+                valeur1.style.color = "blue";
                 valeur2.style.display = "flex";
+                valeur2.style.color = "yellow";
+
 
             </script>
     <?php 

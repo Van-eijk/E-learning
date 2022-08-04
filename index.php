@@ -72,7 +72,7 @@
                     <form action="index.php" method="POST">
                         <div id="equation">
                             <div id="mainEquation">
-                                <input type="text" placeholder="a" name="a" id="a"><em>x² +</em> <input type="text" placeholder="b" name="b" id="b"><em>x +</em><input type="text" placeholder="c" name="c" id="c"><em>= 0</em>
+                                <input autocomplete="off" type="text" placeholder="a" name="a" id="a"><em>x² +</em> <input autocomplete="off" type="text" placeholder="b" name="b" id="b"><em>x +</em><input autocomplete="off" type="text" placeholder="c" name="c" id="c"><em>= 0</em>
 
                             </div>
 

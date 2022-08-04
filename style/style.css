@@ -137,6 +137,9 @@ form{
     justify-content: center;
     font-size: xx-large;
 }
+em{
+    font-family: 'Times New Roman';
+}
 
 #mainEquation{
     display: inline-flex;
@@ -172,12 +175,14 @@ input[type="submit"]{
     box-sizing: border-box;
     font-family: 'comic sans MS';
 
+
     
 }
 
 input[type="submit"]:hover{
     background-color: white;
     color: black;
+    cursor: pointer;
 }
 
 #barre{

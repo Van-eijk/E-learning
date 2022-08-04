@@ -90,7 +90,7 @@
 
                 <div id="right">
                     <p>SOLUTION</p>
-                    <p id="solutionEquation"> <?php echo($a); ?> <em>x² + </em> <?php echo($b); ?> <em>x + </em> <?php echo($c); ?> = 0 </p>
+                    <p id="solutionEquation"> <?php echo($a); ?> <em>x² <span id="signeB">+ </span></em> <?php echo($b); ?> <em>x <span id="signeC">+ </span> </em> <?php echo($c); ?> = 0 </p>
                     <p id="info"></p>
                     <div id="result">
                         <div id="delta">
@@ -193,25 +193,46 @@
 
 <?php 
 
-        if($delta < 0){
-           ?>
+    if($delta < 0){
+        ?>
 
-                <script>
-                    solutionEquation.style.display = "block";
-                    barre.style.display = "block";
-                    right.style.display = "flex";
-                    info.innerHTML = "<?php echo($noSolution); ?>"
-                    info.style.color = "red";
-                    info.style.fontWeight = "bold";
-                    valeur0.style.display = "none";
-                    valeur1.style.display = "none";
-                    valeur2.style.display = "none";
+            <script>
+                solutionEquation.style.display = "block";
+                barre.style.display = "block";
+                right.style.display = "flex";
+                info.innerHTML = "<?php echo($noSolution); ?>"
+                info.style.color = "red";
+                info.style.fontWeight = "bold";
+                valeur0.style.display = "none";
+                valeur1.style.display = "none";
+                valeur2.style.display = "none";
 
-                </script>
-        <?php 
-        }
+            </script>
+    <?php 
+    }
     
-    ?>
+?>
+
+
+<?php 
+    if($b < 0){
+        ?>
+        <script>
+            document.getElementById("signeB").style.display = "none"; // Si le signe de "b" est négatif, on supprime le signe plus (+) pour laisser apparaitre le signe moins (-)
+        </script>
+   <?php 
+   }
+?>
+
+<?php 
+    if($c < 0){
+        ?>
+        <script>
+            document.getElementById("signeC").style.display = "none"; // Si le signe de "c" est négatif, on supprime le signe plus (+) pour laisser apparaitre le signe moins (-)
+        </script>
+   <?php 
+   }
+?>
 
 
 

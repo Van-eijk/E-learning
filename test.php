@@ -1,5 +1,5 @@
 <?php
-    $variable = 2 ;
+    /*$variable = 2 ;
     $variable2 = 3 ;
     $variable3 = "5" ;
 
@@ -10,6 +10,13 @@
     else{
         echo("ce n'est pas un entier");
 
-    }
+    }*/
+
+    $a = 1;
+    $b = 3;
+    $c = $a/$b ;
+    $c = number_format($c,2);
+
+    echo($c);
  ?>
 

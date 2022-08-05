@@ -94,19 +94,19 @@
                     <p id="info"></p>
                     <div id="result">
                         <div id="delta">
-                            <p><em>∆</em> = <?php echo($delta); ?></p>
+                            <p><em>∆</em> = <?php echo(number_format($delta, 1)); ?></p> 
                         </div>
 
                         <div id="x0">
-                            <p><em>x0</em> = <?php echo($x0); ?></p>
+                            <p><em>x0</em> = <?php echo(number_format($x0,1)); ?></p>
                         </div>
                         <div id="x1">
-                            <p><em>x1</em> = <?php echo($x1); ?></p>
+                            <p><em>x1</em> = <?php echo(number_format($x1,1)); ?></p>
 
                         </div>
 
                         <div id="x2">
-                            <p><em>x2</em> = <?php echo($x2); ?></p>
+                            <p><em>x2</em> = <?php echo(number_format($x2,1)); ?></p>
 
 
                         </div>
